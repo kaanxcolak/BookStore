@@ -40,5 +40,20 @@ namespace WebApi.AddControllers{
             return bookList;
         }
 
+        [HttpGet("{id}")]
+        public Book GetByID(int id)                //Linq ile sql ifadelerini kullanabildik
+        {
+            var book = BookList.Where(book => book.Id ==id).SingleOrDefault();
+            return book;
+        }
+
+
+        // [HttpGet]
+        // public Book Get ([FromQuery] string id)                //Linq ile sql ifadelerini kullanabildik
+        // {
+        //     var book = BookList.Where(book => book.Id == Convert.ToInt32(id)).SingleOrDefault();
+        //     return book;
+        // }
+
     }
 }
