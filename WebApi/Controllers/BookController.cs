@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApi.AddControllers{
 
     [ApiController]
-    [Route("{controller}s")]
+    [Route("[controller]/[action]")]
     public class BookController:ControllerBase
     {
         //static yaptık çünkü uygulama çalıştığı sürece yaşamalı ve uygulama sona erince lifecycle sonra ermeli!
