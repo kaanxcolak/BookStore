@@ -55,5 +55,19 @@ namespace WebApi.AddControllers{
         //     return book;
         // }
 
+        //Post --> Ekleme yapar
+        [HttpPost]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            var book = BookList.SingleOrDefault(x=>x.Title == newBook.Title);
+            if(book is not null)
+            return BadRequest();
+
+            BookList.Add(newBook);
+            return Ok();
+
+        }
+        //Put  --> Update yapar
+
     }
 }
