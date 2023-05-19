@@ -68,6 +68,23 @@ namespace WebApi.AddControllers{
 
         }
         //Put  --> Update yapar
+        [HttpPut("{id}")]
+        public IActionResult UpdateBook(int id, [FromBody] Book updateBook)    //IActionResult ile validation yapmış oluruz yoksa hata döndürür
+        {
+            var book = BookList.SingleOrDefault(x => x.Id == id);
+            if(book is null)
+                return BadRequest();
+            book.GenreId = updateBook.GenreId != default ? updateBook.GenreId : book.GenreId;
+            book.PageCount = updateBook.PageCount != default ? updateBook.PageCount : book.PageCount;
+            book.PublishDate = updateBook.PublishDate != default ? updateBook.PublishDate : book.PublishDate;
+            book.Title = updateBook.Title != default ? updateBook.Title : book.Title;
+            return Ok();            
+        }      
+
+        //Delete
+        [HttpDelete("id")]
+        public IActionResult       
+
 
     }
 }
