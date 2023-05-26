@@ -9,6 +9,8 @@ namespace WebApi.DBOperations
 
         }
 
+        public DbSet<Book> Books{get;set;}
+         
         
     }
 }
