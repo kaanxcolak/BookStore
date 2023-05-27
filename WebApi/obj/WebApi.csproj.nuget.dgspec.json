@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2022-2023\\Software\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {}
+    "D:\\2022-2023\\Software\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\2022-2023\\Software\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {
+    "D:\\2022-2023\\Software\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2022-2023\\Software\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\2022-2023\\Software\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\2022-2023\\Software\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "D:\\2022-2023\\Software\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\kaanc\\.nuget\\packages\\",
-        "outputPath": "D:\\2022-2023\\Software\\Pratikler\\BookStore\\WebApi\\obj\\",
+        "outputPath": "D:\\2022-2023\\Software\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,7 +47,15 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
