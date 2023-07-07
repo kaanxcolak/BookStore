@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.GetBooks;
 using WebApi.DBOperations;
+using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 
 namespace WebApi.AddControllers{
 
@@ -15,38 +18,13 @@ namespace WebApi.AddControllers{
 
         }
 
-        //static yaptık çünkü uygulama çalıştığı sürece yaşamalı ve uygulama sona erince lifecycle sonra ermeli!
-        //private static List<Book> BookList = new List<Book>()
-        //{
-        //    new Book{
-        //        Id =1,
-        //        Title = "Lean Startup",
-        //        GenreId = 1, //Personal Growth
-        //        PageCount = 200,
-        //        PublishDate = new DateTime(2001,04,02)
-        //    },
-        //    new Book{
-        //        Id =2,
-        //        Title = "Herland",
-        //        GenreId = 2, //Science Fiction
-        //        PageCount = 250,
-        //        PublishDate = new DateTime(2011,04,22)
-        //    },
-        //    new Book{
-        //        Id =3,
-        //        Title = "Dune",
-        //        GenreId = 2, //Science Fiction 
-        //        PageCount = 500,
-        //        PublishDate = new DateTime(2021,01,12)
-        //    },
-        //}; //static liste kapandı
-
-
         [HttpGet]
-        public List<Book> GetBooks()                //Linq ile sql ifadelerini kullanabildik
+        public IActionResult GetBooks()                //Linq ile sql ifadelerini kullanabildik
         {
-            var bookList = _context.Books.OrderBy(x => x.Id).ToList<Book>();
-            return bookList;
+            GetBooksQuery query = new GetBooksQuery(_context);
+            var result = query.Handle();
+            return Ok(result);
+
         }
 
         [HttpGet("{id}")]
@@ -66,14 +44,20 @@ namespace WebApi.AddControllers{
 
         //Post --> Ekleme yapar
         [HttpPost]
-        public IActionResult AddBook([FromBody] Book newBook)
+        public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-            var book = _context.Books.SingleOrDefault(x=>x.Title == newBook.Title);
-            if(book is not null)
-            return BadRequest();
+            CreateBookCommand command = new CreateBookCommand(_context);
+            try
+            {
+                command.Model = newBook;
+                command.Handle();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);   
+            }          
+         
 
-            _context.Books.Add(newBook);
-            _context.SaveChanges();
             return Ok();
 
         }
