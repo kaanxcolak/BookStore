@@ -1,9 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WebApi",
-    "\\WebApi\\DBOperations"
+    ""
   ],
-  "SelectedNode": "\\WebApi\\Book.cs",
   "PreviewInSolutionExplorer": false
 }
