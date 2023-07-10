@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApi",
+    "\\WebApi\\BookOperations",
+    "\\WebApi\\BookOperations\\UpdateBook",
+    "\\WebApi\\Controllers"
   ],
+  "SelectedNode": "\\WebApi\\BookOperations\\UpdateBook\\UpdateBookCommand.cs",
   "PreviewInSolutionExplorer": false
 }

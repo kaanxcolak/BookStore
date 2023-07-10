@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UKNL/9Kbb1V3AfxaATYXfzhC4heyuvqQTZdqm5uW89F/iqoq16WqqUIr8F4/OAiZ+SPxSCQq7YhopVexx2aP2Q==",
+  "dgSpecHash": "iidsTKP0wkEF4x+0Kpu+KuoY8Tinv6jyJDvmCusV1kF9Cm/t2m8b78WUOhtMe5VwwDFOGQ+bxgavQc0PNTkbtg==",
   "success": true,
   "projectFilePath": "D:\\2022-2023\\Software\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaanc\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\kaanc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\kaanc\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
     "C:\\Users\\kaanc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\kaanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\kaanc\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

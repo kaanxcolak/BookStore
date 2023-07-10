@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"
