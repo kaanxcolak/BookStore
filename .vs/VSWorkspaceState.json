@@ -6,6 +6,6 @@
     "\\WebApi\\BookOperations\\UpdateBook",
     "\\WebApi\\Controllers"
   ],
-  "SelectedNode": "\\WebApi\\BookOperations\\UpdateBook\\UpdateBookCommand.cs",
+  "SelectedNode": "\\BookStoreSln.sln",
   "PreviewInSolutionExplorer": false
 }
