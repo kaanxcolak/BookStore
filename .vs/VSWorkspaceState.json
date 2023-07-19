@@ -4,8 +4,9 @@
     "\\WebApi",
     "\\WebApi\\BookOperations",
     "\\WebApi\\BookOperations\\UpdateBook",
-    "\\WebApi\\Controllers"
+    "\\WebApi\\Controllers",
+    "\\WebApi\\Middlewares"
   ],
-  "SelectedNode": "\\BookStoreSln.sln",
+  "SelectedNode": "\\WebApi\\Middlewares\\CustomExceptionMiddleware.cs",
   "PreviewInSolutionExplorer": false
 }

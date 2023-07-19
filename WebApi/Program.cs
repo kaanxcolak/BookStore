@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
+using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseInMemory
 //    x.AddProfile(typeof(Maps));
 //});
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton<ILoggerService, DBLogger>();
 
 var app = builder.Build();
 
