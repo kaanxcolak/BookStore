@@ -7,6 +7,5 @@
     "\\WebApi\\Controllers",
     "\\WebApi\\Middlewares"
   ],
-  "SelectedNode": "\\WebApi\\Middlewares\\CustomExceptionMiddleware.cs",
   "PreviewInSolutionExplorer": false
 }
