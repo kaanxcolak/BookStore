@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.BookOperations.CreateBook
 {
     public class CreateBookCommand
     {
@@ -21,7 +22,7 @@ namespace WebApi.BookOperations.CreateBook
             var book = _dbContext.Books.SingleOrDefault(x => x.Title == Model.Title);
             if (book is not null)
                 throw new InvalidOperationException("Kitap zaten mevcut");
-            book = _mapper.Map<Book>(Model); 
+            book = _mapper.Map<Book>(Model);
 
 
             _dbContext.Books.Add(book);

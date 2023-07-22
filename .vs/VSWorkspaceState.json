@@ -7,5 +7,6 @@
     "\\WebApi\\Controllers",
     "\\WebApi\\Middlewares"
   ],
+  "SelectedNode": "\\WebApi\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

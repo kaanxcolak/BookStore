@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.GetBooks
+namespace WebApi.Application.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {
@@ -17,8 +18,8 @@ namespace WebApi.BookOperations.GetBooks
 
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dbContext.Books.OrderBy(x => x.Id).ToList<Book>();
-            List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);  
+            var bookList = _dbContext.Books.OrderBy(x => x.Id).ToList();
+            List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);
             return vm;
         }
     }

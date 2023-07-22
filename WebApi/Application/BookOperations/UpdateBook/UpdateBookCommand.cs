@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.UpdateBook
+namespace WebApi.Application.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {
@@ -22,7 +23,7 @@ namespace WebApi.BookOperations.UpdateBook
             if (book is null)
                 throw new InvalidOperationException("Güncellenecek Kitap Bulunamadı!");
             book = _mapper.Map<Book>(Model);
-            
+
             _context.SaveChanges();
             //_context.SaveChangesAsync();
         }
@@ -30,7 +31,7 @@ namespace WebApi.BookOperations.UpdateBook
         public class UpdateBookModel
         {
             public string Title { get; set; }
-            public int GenreId { get; set; } 
+            public int GenreId { get; set; }
 
         }
     }

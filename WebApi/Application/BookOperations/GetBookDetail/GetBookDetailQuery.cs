@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetBookDetail
+namespace WebApi.Application.BookOperations.GetBookDetail
 {
     public class GetBookDetailQuery
     {
@@ -21,7 +21,7 @@ namespace WebApi.BookOperations.GetBookDetail
             var book = _dbContext.Books.Where(book => book.Id == BookId).SingleOrDefault();
             if (book is null)
                 throw new InvalidOperationException("Kitap Bulunamadı!");
-            BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);         
+            BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
 
             return vm;
         }

@@ -1,16 +1,16 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using FluentValidation.Results;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBookDetail;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
 using WebApi.DBOperations;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.GetBookDetail.GetBookDetailQuery;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
+using static WebApi.Application.BookOperations.CreateBook.CreateBookCommand;
+using static WebApi.Application.BookOperations.GetBookDetail.GetBookDetailQuery;
+using static WebApi.Application.BookOperations.UpdateBook.UpdateBookCommand;
 using FluentValidation;
+using WebApi.Application.BookOperations.CreateBook;
+using WebApi.Application.BookOperations.DeleteBook;
+using WebApi.Application.BookOperations.GetBookDetail;
+using WebApi.Application.BookOperations.GetBooks;
+using WebApi.Application.BookOperations.UpdateBook;
 
 namespace WebApi.AddControllers
 {
