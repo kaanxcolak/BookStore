@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.BookOperations.GetBookDetail
+namespace WebApi.Application.BookOperations.Queries.GetBookDetail
 {
     public class GetBookDetailQuery
     {

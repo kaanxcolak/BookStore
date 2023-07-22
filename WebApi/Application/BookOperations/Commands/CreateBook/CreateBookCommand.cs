@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
-namespace WebApi.Application.BookOperations.CreateBook
+namespace WebApi.Application.BookOperations.Commands.CreateBook
 {
     public class CreateBookCommand
     {

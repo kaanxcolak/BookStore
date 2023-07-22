@@ -2,15 +2,15 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using FluentValidation.Results;
 using WebApi.DBOperations;
-using static WebApi.Application.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.Application.BookOperations.GetBookDetail.GetBookDetailQuery;
-using static WebApi.Application.BookOperations.UpdateBook.UpdateBookCommand;
+using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
+using static WebApi.Application.BookOperations.Queries.GetBookDetail.GetBookDetailQuery;
+using static WebApi.Application.BookOperations.Commands.UpdateBook.UpdateBookCommand;
 using FluentValidation;
-using WebApi.Application.BookOperations.CreateBook;
-using WebApi.Application.BookOperations.DeleteBook;
-using WebApi.Application.BookOperations.GetBookDetail;
-using WebApi.Application.BookOperations.GetBooks;
-using WebApi.Application.BookOperations.UpdateBook;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using WebApi.Application.BookOperations.Commands.DeleteBook;
+using WebApi.Application.BookOperations.Commands.UpdateBook;
+using WebApi.Application.BookOperations.Queries.GetBookDetail;
+using WebApi.Application.BookOperations.Queries.GetBooks;
 
 namespace WebApi.AddControllers
 {
@@ -51,15 +51,7 @@ namespace WebApi.AddControllers
 
             return Ok(result);
         }
-
-
-        // [HttpGet]
-        // public Book Get ([FromQuery] string id)                //Linq ile sql ifadelerini kullanabildik
-        // {
-        //     var book = BookList.Where(book => book.Id == Convert.ToInt32(id)).SingleOrDefault();
-        //     return book;
-        // }
-
+      
         //Post --> Ekleme yapar
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
@@ -69,13 +61,6 @@ namespace WebApi.AddControllers
             CreateBookCommandValidator validator = new CreateBookCommandValidator(); //instance oluşturdum!
             validator.ValidateAndThrow(command);
             command.Handle();
-
-            //if (!result.IsValid)
-            //    foreach (var item in result.Errors)
-            //        Console.WriteLine("Özellik" + item.PropertyName + "- Error Message: " + item.ErrorMessage);
-            //else
-            //    command.Handle();
-
 
             return Ok();
 
