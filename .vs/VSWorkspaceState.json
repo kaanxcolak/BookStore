@@ -2,8 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\WebApi",
-    "\\WebApi\\BookOperations",
-    "\\WebApi\\BookOperations\\UpdateBook",
     "\\WebApi\\Controllers",
     "\\WebApi\\Middlewares"
   ],
