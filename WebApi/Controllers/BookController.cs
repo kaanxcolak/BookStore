@@ -12,7 +12,7 @@ using WebApi.Application.BookOperations.Commands.UpdateBook;
 using WebApi.Application.BookOperations.Queries.GetBookDetail;
 using WebApi.Application.BookOperations.Queries.GetBooks;
 
-namespace WebApi.AddControllers
+namespace WebApi.Controllers
 {
 
     [ApiController]

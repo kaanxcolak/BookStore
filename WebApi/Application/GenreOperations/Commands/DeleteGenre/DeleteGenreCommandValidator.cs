@@ -15,5 +15,3 @@ namespace WebApi.Application.GenreOperations.Commands.DeleteGenre
 }
 
 
-
-DeleteGenreCommandValidator

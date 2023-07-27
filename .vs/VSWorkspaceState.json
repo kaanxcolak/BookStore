@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\WebApi",
+    "\\WebApi\\Application",
+    "\\WebApi\\Application\\GenreOperations",
+    "\\WebApi\\Application\\GenreOperations\\Queries",
+    "\\WebApi\\Application\\GenreOperations\\Queries\\GetGenres",
     "\\WebApi\\Controllers",
     "\\WebApi\\Middlewares"
   ],
-  "SelectedNode": "\\WebApi\\Program.cs",
+  "SelectedNode": "\\WebApi\\Application\\GenreOperations\\Queries\\GetGenres\\GetGenresQuery.cs",
   "PreviewInSolutionExplorer": false
 }
