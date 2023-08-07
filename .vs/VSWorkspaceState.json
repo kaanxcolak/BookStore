@@ -4,11 +4,13 @@
     "\\WebApi",
     "\\WebApi\\Application",
     "\\WebApi\\Application\\GenreOperations",
+    "\\WebApi\\Application\\GenreOperations\\Commands",
+    "\\WebApi\\Application\\GenreOperations\\Commands\\UpdateGenre",
     "\\WebApi\\Application\\GenreOperations\\Queries",
     "\\WebApi\\Application\\GenreOperations\\Queries\\GetGenres",
     "\\WebApi\\Controllers",
     "\\WebApi\\Middlewares"
   ],
-  "SelectedNode": "\\WebApi\\Application\\GenreOperations\\Queries\\GetGenres\\GetGenresQuery.cs",
+  "SelectedNode": "\\WebApi\\Application\\GenreOperations\\Commands\\UpdateGenre\\UpdateGenreCommand.cs",
   "PreviewInSolutionExplorer": false
 }
