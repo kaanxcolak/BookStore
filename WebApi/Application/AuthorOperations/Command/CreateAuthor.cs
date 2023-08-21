@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
 namespace WebApi.Application.AuthorOperations.Command
 {
@@ -17,7 +18,13 @@ namespace WebApi.Application.AuthorOperations.Command
 
         public void Handle()
         {
+            var author = _dbContext.Authors.SingleOrDefault(x=> x.Name == Model.Name);
+            if (author != null)
+                throw new InvalidOperationException("Yazar zaten mevcut");
 
+            author = _mapper.Map<Author>(Model);
+            _dbContext.Authors.Add(author);
+            _dbContext.SaveChanges();
         }
         
     }

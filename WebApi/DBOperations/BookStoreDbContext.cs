@@ -12,7 +12,7 @@ namespace WebApi.DBOperations
 
         public DbSet<Book> Books { get; set; } //Book aslında Db'deki Books objesinin bir replikası diyebiliriz!
         public DbSet<Genre> Genres { get; set; }
-
+        public DbSet<Author> Authors { get; set; }
 
 
 
