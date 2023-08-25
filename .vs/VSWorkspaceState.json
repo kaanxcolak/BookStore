@@ -7,6 +7,6 @@
     "\\WebApi\\Application\\BookOperations\\Queries",
     "\\WebApi\\Application\\BookOperations\\Queries\\GetBooks"
   ],
-  "SelectedNode": "\\WebApi\\Application\\BookOperations\\Queries\\GetBooks\\GetBooksQuery.cs",
+  "SelectedNode": "\\BookStoreSln.sln",
   "PreviewInSolutionExplorer": false
 }
