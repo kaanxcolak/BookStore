@@ -8,11 +8,19 @@ namespace WebApi.Application.GenreOperations.Queries.GetGenres
     {
         public readonly BookStoreDbContext _context;
         public readonly IMapper _mapper;
+        private IBookStoreDbContext context;
+        private IMapper mapper;
 
         public GetGenresQuery(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+        }
+
+        public GetGenresQuery(IBookStoreDbContext context, IMapper mapper)
+        {
+            this.context = context;
+            this.mapper = mapper;
         }
 
         public List<GenresViewModel> Handle()

@@ -2,7 +2,7 @@
 using WebApi.DBOperations;
 using WebApi.Entities;
 
-namespace WebApi.Application.AuthorOperations.Command
+namespace WebApi.Application.AuthorOperations.Command.CreateAuthor
 {
     public class CreateAuthor
     {
@@ -18,7 +18,7 @@ namespace WebApi.Application.AuthorOperations.Command
 
         public void Handle()
         {
-            var author = _dbContext.Authors.SingleOrDefault(x=> x.Name == Model.Name);
+            var author = _dbContext.Authors.SingleOrDefault(x => x.Name == Model.Name);
             if (author != null)
                 throw new InvalidOperationException("Yazar zaten mevcut");
 
@@ -26,13 +26,14 @@ namespace WebApi.Application.AuthorOperations.Command
             _dbContext.Authors.Add(author);
             _dbContext.SaveChanges();
         }
-        
-    }
-    public class CreateAuthorModel
-    {
-        public int BookId { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public DateTime PublishDate { get; set; }
+
+
+        public class CreateAuthorModel
+        {
+            public int BookId { get; set; }
+            public string Name { get; set; }
+            public string LastName { get; set; }
+            public DateTime PublishDate { get; set; }
+        }
     }
 }

@@ -9,6 +9,9 @@ namespace WebApi.Application.BookOperations.Queries.GetBookDetail
     {
         private readonly BookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
+        private IBookStoreDbContext context;
+        private IMapper mapper;
+
         public int BookId { get; set; }
 
         public GetBookDetailQuery(BookStoreDbContext dbContext, IMapper mapper)
@@ -16,6 +19,13 @@ namespace WebApi.Application.BookOperations.Queries.GetBookDetail
             _dbContext = dbContext;
             _mapper = mapper;
         }
+
+        public GetBookDetailQuery(IBookStoreDbContext context, IMapper mapper)
+        {
+            this.context = context;
+            this.mapper = mapper;
+        }
+
         public BookDetailViewModel Handle()
         {
             var book = _dbContext.Books.Include(x => x.Genre).Where(book => book.Id == BookId).SingleOrDefault();

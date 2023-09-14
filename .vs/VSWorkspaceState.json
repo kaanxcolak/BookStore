@@ -5,8 +5,9 @@
     "\\WebApi\\Application",
     "\\WebApi\\Application\\BookOperations",
     "\\WebApi\\Application\\BookOperations\\Queries",
-    "\\WebApi\\Application\\BookOperations\\Queries\\GetBooks"
+    "\\WebApi\\Application\\BookOperations\\Queries\\GetBooks",
+    "\\WebApi\\Controllers"
   ],
-  "SelectedNode": "\\BookStoreSln.sln",
+  "SelectedNode": "\\WebApi\\Controllers\\AuthorController.cs",
   "PreviewInSolutionExplorer": false
 }

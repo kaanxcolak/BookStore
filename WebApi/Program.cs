@@ -21,6 +21,8 @@ builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseInMemory
 //    x.AddExpressionMapping();
 //    x.AddProfile(typeof(Maps));
 //});
+builder.Services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<BookStoreDbContext>());
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddSingleton<ILoggerService, DBLogger>();
 

@@ -46,7 +46,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/7.0.5": {
+      "Microsoft.AspNetCore.OpenApi/7.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -491,10 +491,10 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/7.0.5": {
-      "sha512": "yxFvk9BsgL/eDJVsPp0zbUpL73u9uXLYTnWoMBvnJdm8+970YuhM2XWcDOyetjkp8l8z00MHgfYHCRXOnLx/+Q==",
+    "Microsoft.AspNetCore.OpenApi/7.0.0": {
+      "sha512": "P1mkNhZ3IwU3phNLIUkgqVXb1exnooTalIYwpSON3oKKkcRtACDgS4WpO+xnwFw4KzV0bmgkUqB3acXxIefvvg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/7.0.5",
+      "path": "microsoft.aspnetcore.openapi/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -502,7 +502,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -1327,7 +1327,7 @@
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "FluentValidation >= 10.1.0",
-      "Microsoft.AspNetCore.OpenApi >= 7.0.5",
+      "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.0",
       "Microsoft.Extensions.DependencyInjection >= 6.0.0",
@@ -1389,7 +1389,7 @@
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[7.0.5, )"
+            "version": "[7.0.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

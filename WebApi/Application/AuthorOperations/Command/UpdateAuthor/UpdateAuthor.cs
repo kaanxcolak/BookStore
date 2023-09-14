@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.AuthorOperations.Command
+namespace WebApi.Application.AuthorOperations.Command.UpdateAuthor
 {
     public class UpdateAuthor
     {
@@ -14,7 +14,7 @@ namespace WebApi.Application.AuthorOperations.Command
         }
         public void Handle()
         {
-            var author = _dbContext.Authors.SingleOrDefault(x=> x.ID == AuthorID);
+            var author = _dbContext.Authors.SingleOrDefault(x => x.ID == AuthorID);
             if (author == null)
                 throw new InvalidOperationException("Yazar Bulunamadı!");
 
@@ -24,13 +24,14 @@ namespace WebApi.Application.AuthorOperations.Command
 
             _dbContext.SaveChanges();
         }
-    }
-    public class UpdateAuthorModel
-    {
-        public int BookId { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
+
+        public class UpdateAuthorModel
+        {
+            public int BookId { get; set; }
+            public string Name { get; set; }
+            public string LastName { get; set; }
 
 
+        }
     }
 }
