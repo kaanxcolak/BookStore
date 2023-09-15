@@ -6719,6 +6719,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
+      "Microsoft.EntityFrameworkCore >= 6.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "WebApi >= 1.0.0",
       "coverlet.collector >= 3.2.0",
@@ -6772,6 +6774,14 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

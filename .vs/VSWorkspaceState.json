@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WebApi",
-    "\\WebApi\\Application",
-    "\\WebApi\\Application\\BookOperations",
-    "\\WebApi\\Application\\BookOperations\\Queries",
-    "\\WebApi\\Application\\BookOperations\\Queries\\GetBooks",
-    "\\WebApi\\Controllers"
+    ""
   ],
-  "SelectedNode": "\\WebApi\\Controllers\\AuthorController.cs",
+  "SelectedNode": "\\BookStoreSln.sln",
   "PreviewInSolutionExplorer": false
 }

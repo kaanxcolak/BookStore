@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApi.UnitTests.TestsSetup
+namespace WebApi.UnitTests.TestSetup
 {
-    public class CommonTestFixture
+    public class Books
     {
     }
 }
